@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title_content %}
+    <title>Home</title>
+{% endblock %}
+
+{% block page_content %}
+{% if user.is_authenticated %}
+    <h1 style="color: tomato">Welcome {{ user.first_name }} {{ user.last_name }}!!!</h1>
+<p>The Employee Details Click Here<button type="submit"><a href="/employee_dashboard/">Employee_Register</a></button></p>
+{% else %}
+    <h1>Home Page</h1>
+{% endif %}
+{% endblock %}
